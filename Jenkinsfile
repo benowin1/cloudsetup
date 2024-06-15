@@ -14,7 +14,6 @@ pipeline {
         stage('Building image') {
             steps{
                script {
-                   sh "docker version" // DOCKER_CERT_PATH is automatically picked up by the Docker client
                    dockerImage = docker.build registry + "1"
                 }
             }
