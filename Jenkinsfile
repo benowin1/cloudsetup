@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Git Checkout') {
+        stage('Cloning Git') {
             steps {
                 script {
                     git branch: 'main',
@@ -10,9 +10,13 @@ pipeline {
                 }
             }
         }
-        stage('Build image') {         
-           app = docker.build('benowin1/cloudsetup')    
-       }    
+        stage('Building image') {
+            steps{
+               script {
+                   dockerImage = docker.build registry + "1"
+                }
+            }
+        } 
         stage('Build') {
             steps {
                 echo 'Building..'
