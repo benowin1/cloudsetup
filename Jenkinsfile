@@ -12,8 +12,7 @@ pipeline {
             }
         }
         stage('Build image') {         
-       
-            app = docker.build("benowin1/cloudsetup")    
+           app = docker.build('benowin1/cloudsetup')    
        }    
         stage('Build') {
             steps {
