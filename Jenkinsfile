@@ -11,6 +11,10 @@ pipeline {
                 }
             }
         }
+        stage('Build image') {         
+       
+            app = docker.build("benowin1/cloudsetup")    
+       }    
         stage('Build') {
             steps {
                 echo 'Building..'
