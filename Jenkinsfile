@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    agent app
+    app any
     stages {
         stage('Git Checkout') {
             steps {
