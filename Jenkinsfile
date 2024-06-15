@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    app any
     stages {
         stage('Git Checkout') {
             steps {
