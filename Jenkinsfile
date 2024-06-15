@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    def app
+    agent app
     stages {
         stage('Git Checkout') {
             steps {
