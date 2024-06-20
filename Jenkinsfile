@@ -14,12 +14,8 @@ pipeline {
         
         stage('Build') {
             steps {
-                echo 'Testing..'
-                bat '''#!/bin/bash
-
-                    echo "Hello from bash"
-                    echo "Who I'm $SHELL"
-                '''
+                echo 'Build..'
+                 bat 'docker build --tag myname/my-benowin'
             }
         }
         stage('Test') {
