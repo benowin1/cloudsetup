@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build..'
-                 bat 'docker build -f '.docker/http/Dockerfile' --target my-target --label my-label .'
+                 bat 'docker build -t qnmahjong .'
             }
         }
         stage('Test') {
