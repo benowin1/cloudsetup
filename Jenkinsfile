@@ -15,6 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build..'
+                 bat "mvn clean verify"
                  bat 'docker build -t qnmahjong .'
             }
         }
