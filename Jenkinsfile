@@ -14,7 +14,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'docker build --tag myname/my-benowin
+                sh 'docker build --tag myname/my-benowin'
             }
         }
         stage('Test') {
