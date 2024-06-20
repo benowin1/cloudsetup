@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     
     stages {
         stage('Cloning Git') {
@@ -15,6 +15,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Testing..'
+                sh '''#!/bin/bash
+
+                    echo "Hello from bash"
+                    echo "Who I'm $SHELL"
+                '''
             }
         }
         stage('Test') {
