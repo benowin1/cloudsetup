@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Testing..'
-                sh '''#!/bin/bash
+                bat '''#!/bin/bash
 
                     echo "Hello from bash"
                     echo "Who I'm $SHELL"
