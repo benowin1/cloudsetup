@@ -14,7 +14,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh "docker version"
+                echo 'Testing..'
             }
         }
         stage('Test') {
