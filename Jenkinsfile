@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build..'
-                 bat 'docker build --tag myname/my-benowin'
+                 bat 'docker build -f '.docker/http/Dockerfile' --target my-target --label my-label .'
             }
         }
         stage('Test') {
