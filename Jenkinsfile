@@ -22,8 +22,8 @@ pipeline {
         }
         stage('ECR Push') {
             steps {
-                bat 'docker tag qnmahjong:latest 896600156481.dkr.ecr.ap-south-1.amazonaws.com/demo:latest'
-                bat 'docker push 896600156481.dkr.ecr.ap-south-1.amazonaws.com/demo:latest'
+                bat 'docker tag qnmahjong:latest public.ecr.aws/b1x9w7o4/demo:latest'
+                bat 'docker push public.ecr.aws/b1x9w7o4/demo:latest'
             }
         }
         stage('Deploy') {
