@@ -16,6 +16,7 @@ pipeline {
             steps {
                 echo 'Build..'
                 bat "docker version"
+                bat 'mvn clean install'
                 bat 'docker build -t qnmahjong .'
             }
         }
