@@ -20,9 +20,10 @@ pipeline {
                 bat 'docker build -t qnmahjong .'
             }
         }
-        stage('Test') {
+        stage('ECR Push') {
             steps {
-                echo 'Testing..'
+                bat docker tag demo:latest 896600156481.dkr.ecr.ap-south-1.amazonaws.com/demo:latest
+                bat docker push 896600156481.dkr.ecr.ap-south-1.amazonaws.com/demo:latest
             }
         }
         stage('Deploy') {
