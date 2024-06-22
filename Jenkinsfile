@@ -22,8 +22,8 @@ pipeline {
         }
         stage('ECR Push') {
             steps {
-                bat docker tag demo:latest 896600156481.dkr.ecr.ap-south-1.amazonaws.com/demo:latest
-                bat docker push 896600156481.dkr.ecr.ap-south-1.amazonaws.com/demo:latest
+                bat 'docker tag demo:latest 896600156481.dkr.ecr.ap-south-1.amazonaws.com/demo:latest'
+                bat 'docker push 896600156481.dkr.ecr.ap-south-1.amazonaws.com/demo:latest'
             }
         }
         stage('Deploy') {
