@@ -21,9 +21,11 @@ pipeline {
             }
         }
         stage('ECR Push') {
-            withAWS(credentials: 'AWSCLICREDENTIALS', region: 'us-west-2') {
+            steps {
+                withAWS(credentials: 'AWSCLICREDENTIALS', region: 'us-west-2') {
                 bat 'docker tag qnmahjong:latest public.ecr.aws/b1x9w7o4/demo:latest'
                 bat 'docker push public.ecr.aws/b1x9w7o4/demo:latest'
+                }
             }
         }
         stage('Deploy') {
