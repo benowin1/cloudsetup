@@ -25,10 +25,7 @@ pipeline {
                 script {
                  sh "aws ecr get-login-password - region us-west-2 | docker login - username AWS - password-stdin 896600156481.dkr.ecr.us-west-2.amazonaws.com"
                  }
-                withAWS(credentials: 'AWSCLICREDENTIALS', region: 'us-west-2') {
-                bat 'docker tag qnmahjong:latest public.ecr.aws/b1x9w7o4/demo:latest'
-                bat 'docker push public.ecr.aws/b1x9w7o4/demo:latest'
-                }
+                
             }
         }
         stage('Deploy') {
