@@ -22,7 +22,7 @@ pipeline {
         }
         stage('ECR Push') {
             steps {
-                
+              echo 'ECR Push'  
                                      
             }
         }
