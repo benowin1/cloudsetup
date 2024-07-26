@@ -22,10 +22,8 @@ pipeline {
         }
         stage('ECR Push') {
             steps {
-                script {
-                    
-                 }
                 
+                                     
             }
         }
         stage('Deploy') {
