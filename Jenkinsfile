@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               withEnv(["AWS_ACCESS_KEY=AKIA5BQMIVFA2JMJ6GL3","AWS_SECRET_ACCESS_KEY=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","AWS_DEFAULT_REGION=us-west-2"])
+              withEnv(["AWS_ACCESS_KEY_ID=AKIA5BQMIVFA2JMJ6GL3","AWS_SECRET_ACCESS_KEY=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","AWS_DEFAULT_REGION=us-west-2"])
 				 {
 					 sh 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/b1x9w7o4'
 					 
