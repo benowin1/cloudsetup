@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Build..'
                 sh "docker version"
-                sh 'mvn clean install -U'
+                sh 'mvn clean install'
                 sh 'docker build -t qnmahjong .'
             }
         }
