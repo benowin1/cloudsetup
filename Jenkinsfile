@@ -15,9 +15,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build..'
-                bat "docker version"
-                bat 'mvn clean install'
-                bat 'docker build -t qnmahjong .'
+                sh "docker version"
+                sh 'mvn clean install'
+                sh 'docker build -t qnmahjong .'
             }
         }
         stage('ECR Push') {
